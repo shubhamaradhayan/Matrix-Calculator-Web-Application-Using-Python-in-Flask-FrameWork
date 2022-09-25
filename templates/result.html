@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block body %}
+<br><h1>{{o}}</h1><hr><br>
+
+<div class="container text-center">
+<h3>{{o}}</h3>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h3 style="text-decoration: underline;">Result Matrix</h3> -->
+          <div class="table-responsive text-center">
+            <table class="table table-bordered border-dark">
+              <tbody>
+                {{n}}
+{% for i in a %}
+
+<tr>
+{% for j in i %}
+
+<td>{{j}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+              
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h3 style="text-decoration: underline;">Result Matrix</h3> -->
+          <div class="table-responsive text-center">
+            <table class="table table-bordered border-dark">
+              <tbody>
+                
+
+{% for i in b %}
+
+<tr>
+{% for j in i %}
+
+<td>{{j}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+              
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<hr>
+<br>
+
+<div class="container">
+    <div class="sm-6 text-center">
+        <div class="card">
+          <div class="card-body">
+            <h3 style="text-decoration: underline;">Result Matrix</h3>
+            <div class="table-responsive">
+              {{t}}
+              <table class="table table-bordered border-dark">
+                <tbody>
+{% for i in r %}
+  
+<tr>
+  {% for j in i %}
+  
+  <td>{{j}}</td>
+  {% endfor %}
+</tr>
+{% endfor %}
+                
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+</div>
+    
+
+    
+{% endblock body %}

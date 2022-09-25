@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block body %}
+    
+
+    <br>
+    <h1>{{o}}</h1>
+    <hr>
+    <br>
+    <div class="container text-center">
+        <form action="/{{act}}" method="post">
+            <div class="row text-center">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="row1">Row Of 1st Matrix : </label>
+                            <input type="text" size="1" name="r1" value="{{r1}}">
+                            <br>
+                            <br>
+                            <label for="col1">Column Of 1st Matrix : </label>
+                            <input type="text" size="1" name="c1" value="{{c1}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="row2">Row Of 1st Matrix : </label>
+                            <input type="text" size="1" name="r2" value="{{r2}}"  {{m1}} >
+                            <br>
+                            <br>
+                            <label for="col2">Column Of 1st Matrix : </label>
+                            <input type="text" size="1" name="c2" value="{{c2}}" {{m2}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <br> -->
+            <button style="margin: 10px;" class="btn btn-primary">create table</button>
+        </form>
+
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <br>
+    <hr>
+    <br>
+
+    {% endblock body %}
+

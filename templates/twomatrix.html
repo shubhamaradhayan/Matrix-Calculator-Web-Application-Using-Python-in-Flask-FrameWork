@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<br>
+<h1>{{o}}</h1>
+<hr>
+<br>
+
+<div class="container">
+    
+
+    <form action="{{act}}" method="post">
+        <div class="container text-center">
+            
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <label for="row1">Row Of 1st Matrix : </label>
+                                <input type="text" size="1" name="r1" value="{{r1}}" readonly>
+                                <br>
+                                <br>
+                                <label for="col1">Column Of 1st Matrix : </label>
+                                <input type="text" size="1" name="c1" value="{{c1}}" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <label for="row2">Row Of 1st Matrix : </label>
+                                <input type="text" size="1" name="r2" value="{{r2}}"  readonly >
+                                <br>
+                                <br>
+                                <label for="col2">Column Of 1st Matrix : </label>
+                                <input type="text" size="1" name="c2" value="{{c2}}" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <br> -->
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 style="text-decoration: underline;">Matrix A</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered border-dark">
+                                <tbody>
+                                    {% for i in range(r1) %}
+
+                                    <tr>
+                                        {% for j in range(c1) %}
+
+                                        <td><input type="text" size="1" name="A[{{i}}][{{j}}]"></td>
+
+                                        {% endfor %}
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 style="text-decoration: underline;">Matrix B</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered border-dark">
+                                <tbody>
+                                    {% for i in range(r2) %}
+                                    <tr>
+                                        {% for j in range(c2) %}
+                                        <td><input type="text" size="1" name="B[{{i}}][{{j}}]" value=""></td>
+                                        {% endfor %}
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+        
+
+</div>
+
+    
+{% endblock body %}

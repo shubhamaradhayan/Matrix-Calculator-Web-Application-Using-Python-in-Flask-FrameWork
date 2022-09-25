@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- <nav class="navbar navbar-dark bg-dark"> -->
+  <nav class="navbar navbar-expand-lg bg-dark ">
+    <div class="container-fluid ">
+      <a class="navbar-brand text-light" href="/"><b>Matrix Opperations</b></a>
+    </div>
+
+    <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> <b>All Opperations</b></button>
+
+  </nav>
+
+  
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"> <b>Matrix Opperations</b> </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <hr>
+    <div class="offcanvas-body">
+<a href="/multiplication" class="btn btn-dark">Multiplication Of The Matrices</a>
+<br>
+<br>
+
+<a href="/summation" class="btn btn-dark"><b>Sum Of Two Matrices</b></a>
+
+<br>
+<br>
+<a href="/substraction" class="btn btn-dark"><b>Substraction Of Two Matrices</b></a>
+<br><br>
+<a href="/determinant" class="btn btn-dark"><b>Determinant Of Matrix</b></a>
+
+<br><br>
+<a href="/inverse" class="btn btn-dark"><b>Inverse Of a Matrix</b></a>
+<br><br>
+<a href="/transpose" class="btn btn-dark"><b>Transpose Of a Matrix</b></a>
+<br><br>
+<a href="/power" class="btn btn-dark"><b>n Power Of Matrix</b></a>
+<br><br>
+<a href="/scalarmultiplication" class="btn btn-dark"><b>Scalar Multication Of a Matrix</b></a>
+<br><br>
+<a href="/scalarsummation" class="btn btn-dark"><b>Scallar Summation Of a Matrix</b></a>
+<br><br>
+<a href="/scalarsubstraction" class="btn btn-dark"><b>Scallar Substraction Of a Matrix</b></a>
+<br><br>
+
+      <!-- <p>Try scrolling the rest of the page to see this option in action.</p> -->
+    </div>
+  </div>
+
+
+{% block body %}
+    
+{% endblock body %}
+
+
+</div>
+<br>
+<br>
+<!-- <h1>Hello, world!</h1> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
